@@ -1,0 +1,16 @@
+name: manual trigger workflow
+
+on:
+    workflow_dispatch:
+        inputs:
+            name: 
+                description: Name
+                required: true
+                type: string
+           
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Greet 
+            run: echo "${{inputs.name}}"
