@@ -1,0 +1,14 @@
+name: Conditional 
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    first:
+        if: github.repository == 'pravin-xebia/Github-Examples'
+        runs-on: ubuntu-latest
+        steps:
+            - name: Greet
+              run: echo "Hello"
